@@ -6,13 +6,10 @@ import { HapticTab } from "@/components/HapticTab";
 
 import TabBarBackground from "@/components/ui/TabBarBackground";
 
-import { useColorScheme } from "@/hooks/useColorScheme";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants/theme";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
