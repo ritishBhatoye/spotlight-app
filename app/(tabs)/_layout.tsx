@@ -20,8 +20,8 @@ export default function TabLayout() {
           borderTopWidth: 0,
           position: "absolute",
           elevation: 0,
-          // height: 60,
-          paddingVertical: 20,
+          height: 40,
+          paddingBottom: 8,
         },
       }}
     >
