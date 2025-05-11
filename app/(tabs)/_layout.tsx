@@ -37,7 +37,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="notification"
+        name="notifications"
         options={{
           title: "Notification",
           tabBarIcon: ({ color, focused }) => (
