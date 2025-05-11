@@ -37,8 +37,22 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="favorite"
+        options={{
+          title: "Favorite",
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol
+              size={28}
+              name={focused ? "heart.fill" : "heart"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="notifications"
         options={{
+          href: null,
           title: "Notification",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
