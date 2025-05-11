@@ -15,6 +15,7 @@ export default function TabLayout() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarActiveTintColor: COLORS.primary,
+        tabBarInactiveTintColor: COLORS.grey,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
@@ -53,11 +54,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="create"
         options={{
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <Ionicons
               size={28}
               name={focused ? "add-circle" : "add-circle-outline"}
-              color={color}
+              color={COLORS.primary}
             />
           ),
         }}
