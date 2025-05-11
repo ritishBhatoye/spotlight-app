@@ -1,10 +1,7 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
-
-import TabBarBackground from "@/components/ui/TabBarBackground";
 
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants/theme";
@@ -18,14 +15,13 @@ export default function TabLayout() {
         tabBarInactiveTintColor: COLORS.grey,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
         tabBarStyle: {
-          backgroundColor: "black",
+          backgroundColor: "#000",
           borderTopWidth: 0,
           position: "absolute",
           elevation: 0,
-          height: 40,
-          paddingBottom: 8,
+          // height: 60,
+          paddingVertical: 20,
         },
       }}
     >
@@ -56,12 +52,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="create"
         options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              size={28}
-              name={focused ? "add-circle" : "add-circle-outline"}
-              color={COLORS.primary}
-            />
+          tabBarIcon: () => (
+            <Ionicons size={28} name="add-circle" color={COLORS.primary} />
           ),
         }}
       />
