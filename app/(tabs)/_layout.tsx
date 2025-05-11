@@ -7,7 +7,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -15,6 +15,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        tabBarShowLabel: false,
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
@@ -30,18 +31,20 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              size={28}
+              name={focused ? "home" : "home-outline"}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="bookmarks"
         options={{
-          title: "",
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
+            <Ionicons
               size={28}
               name={focused ? "bookmark" : "bookmark-outline"}
               color={color}
@@ -52,9 +55,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="create"
         options={{
-          title: "",
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
+            <Ionicons
               size={28}
               name={focused ? "add-circle" : "add-circle-outline"}
               color={color}
@@ -65,11 +67,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="favorite"
         options={{
-          title: "",
           tabBarIcon: ({ color, focused }) => (
-            <IconSymbol
+            <Ionicons
               size={28}
-              name={focused ? "heart.fill" : "heart"}
+              name={focused ? "heart" : "heart-outline"}
               color={color}
             />
           ),
@@ -92,7 +93,6 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
               size={28}
