@@ -30,7 +30,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "",
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
           ),
@@ -39,7 +39,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="bookmark"
         options={{
-          title: "Bookmark",
+          title: "",
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               size={28}
@@ -52,7 +52,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="create"
         options={{
-          title: "Create",
+          title: "",
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               size={28}
@@ -65,7 +65,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="favorite"
         options={{
-          title: "Favorite",
+          title: "",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
               size={28}
@@ -79,7 +79,7 @@ export default function TabLayout() {
         name="notifications"
         options={{
           href: null,
-          title: "Notification",
+          title: "",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
               size={28}
@@ -92,7 +92,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "Profile",
+          title: "",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
               size={28}
