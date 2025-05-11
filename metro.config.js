@@ -1,6 +1,12 @@
+/* eslint-env node */
 const { getDefaultConfig } = require("expo/metro-config");
 const { withNativeWind } = require("nativewind/metro");
 
-const config = getDefaultConfig(__dirname);
+/** @type {import('expo/metro-config').MetroConfig} */
+const baseConfig = getDefaultConfig(__dirname);
 
-module.exports = withNativeWind(config, { input: "./global.css" });
+const config = withNativeWind(baseConfig, {
+  input: "./global.css", // or wherever your NativeWind styles are
+});
+
+module.exports = config;
