@@ -1,6 +1,50 @@
 {
+  "workbench.colorTheme": "Dracula Theme",
+  "yaml.schemas": {
+    "file:///Users/ritishbhatoye/.cursor/extensions/atlassian.atlascode-3.8.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "redhat.telemetry.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "explorer.confirmDelete": false,
+  "editor.bracketPairColorization.enabled": true,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "eslint.alwaysShowStatus": true
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ✅ Enable Tailwind + NativeWind IntelliSense
+  "tailwindCSS.experimental.classRegex": [
+    ["className=\"([^\"]*)", 1],
+    ["className={`([^`]*)", 1],
+    ["tw=\"([^\"]*)", 1]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascript",
+    "typescriptreact": "typescript"
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+
+  // ✅ Enable suggestions
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.wordBasedSuggestions": true,
+  "editor.suggest.selectionMode": "first",
+
+  // 👇 Optional PowerMode etc.
+  "powermode.enabled": false,
+  "powermode.shake.enabled": false
 }
