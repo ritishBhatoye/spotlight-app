@@ -1,9 +1,10 @@
+import { tokenCache } from "@/cache";
 import "../global.css";
 import { ClerkLoaded, ClerkProvider } from "@clerk/clerk-expo";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import React from "react";
-import { tokenCache } from "@clerk/clerk-expo/token-cache";
+
 import { SafeAreaView } from "react-native";
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
@@ -24,7 +25,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ClerkProvider tokenCache={tokenCache}>
+    <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
       <ClerkLoaded>
         <SafeAreaView className="flex-1 bg-black">
           <Stack>
