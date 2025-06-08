@@ -30,6 +30,8 @@ export default function RootLayout() {
         <SafeAreaView className="flex-1 bg-black">
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+
             <Stack.Screen name="+not-found" />
           </Stack>
         </SafeAreaView>
